@@ -1,0 +1,55 @@
+<h1>Question #<%= @question.id %></h1>
+
+<div>
+ 
+</div>
+<div>
+  <strong>Title</strong>:<br />
+  <p><%= @question.title %></p>
+</div>
+<div>
+  <strong>Caption</strong>:<br />
+  <p><%= @question.caption %></p>
+</div>
+ 
+<div> 
+  <p> Answers </p>
+  <ul>
+         
+    
+    
+    <% @answers.each do |answer| %> 
+    <li class="marginal"> <%= answer.caption %></li>  
+    <% end %>
+  
+   
+      
+    
+    
+  </ul>
+
+    
+  
+</div>
+  
+  
+<div>  
+  <h1>Answer this question!</h1>
+
+<form action="/create_answer">
+  <div>
+    <label for="caption"> Answer </label><br />
+    <input id="caption" name="caption" type="text" />
+  </div>
+  <div>
+    <label class="nodisplay" for="question_id">question_id</label><br />
+    <input class="nodisplay" id="question_id" name="question_id" type="text"  value="<%= @question.id %>"/>
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+  
+  
+</div>

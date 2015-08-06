@@ -1,0 +1,29 @@
+<h1>Questions</h1>
+
+<p><a href="/new_question">Add a New Question</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Caption</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @questions.each do |question| %>
+    <tr>
+          <td><%= question.title %></td>
+          <td><%= question.caption %></td>
+          <td class="marginal"><a href="/questions/<%= question.id %>">Show</a>
+        </td>
+      <td class="marginal"><a href="/questions/<%= question.id %>/edit">Edit</a></td>
+      <td class="marginal"><a href="/questions/<%= question.id %>/destroy">Destroy</a></td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,17 @@
+<h1>Editing Question #<%= @question.id %></h1>
+
+<form action="/questions/<%= @question.id %>/update">
+  <div>
+    <label for="title">title</label><br />
+    <input id="title" name="title" value="<%= @question.title  %>" type="text" />
+  </div>
+  <div>
+    <label for="caption">caption</label><br />
+    <input id="caption" name="caption" value="<%= @question.caption  %>" type="text" />
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form>
+
+

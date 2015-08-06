@@ -1,0 +1,13 @@
+<h1>Answer #<%= @answer.id %></h1>
+
+<div>
+  <strong>Caption</strong>:<br />
+  <p><%= @answer.caption %></p>
+</div>
+<div>
+  <strong>Question</strong>:<br />
+  <p><%= @answer.question_id %></p>
+</div>
+
+<a href="/answers/<%= @answer.id %>/edit">Edit</a> |
+<a href="/answers/<%= @answer.id %>/destroy">Destroy</a>
