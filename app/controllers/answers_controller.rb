@@ -17,7 +17,7 @@ class AnswersController < ApplicationController
     @answer.question_id = params[:question_id]
 
     if @answer.save
-      redirect_to "/answers/#{ @answer.id }"
+      redirect_to "/questions/#{ @answer.question_id }"
     else
       render 'new'
     end
